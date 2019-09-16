@@ -39,10 +39,10 @@ public class BookDatabase {
         for (Book book : books){
             if (SKU.equalsIgnoreCase(book.getSku())){
                 this.book = book;
-                break;
+                return book;
             }
         }
-        return book;
+        return null;
     }
 
     public void setBook(Book book) {

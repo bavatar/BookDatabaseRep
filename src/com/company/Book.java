@@ -63,17 +63,17 @@ public class Book {
         isInStock = inStock;
     }
 
-    @Override
-    public String toString (){
-        return "Author: " + author + " Title: "  + title + "\n" + "Description: " + description;
-    }
-
-
-    public void print (){
-        //String a = toString();
-        System.out.println(this);
-
-    }
+//    @Override
+//    public String toString (){
+//        return "Author: " + author + " Title: "  + title + "\n" + "Description: " + description;
+//    }
+//
+//
+//    public void print (){
+//        //String a = toString();
+//        System.out.println(this);
+//
+//    }
 
     public static double getPriceOfBooks1(ArrayList<String> bookList, ArrayList<Book> bArrayList){
         //ArrayList<Double> outArray = new ArrayList<>();
@@ -102,10 +102,12 @@ public class Book {
     public void setSku(String sku) {
         this.sku = sku;
     }
-//    public void getDisplayText(){}    {
-//        String auth = author;
-//        String titl = title;
-//        String descr = getDescription();
-//        System.out.println("Author: " + author + "  Title: " + titl + "\n" + "Description: " + descr);
-//    }
+
+    public String getDisplayText(){
+        String auth = author;
+        String titl = title;
+        String descr = getDescription();
+        //System.out.println("Author: " + author + "  Title: " + titl + "\n" + "Description: " + descr);
+        return "Author: " + author + "  Title: " + titl + "\n" + "Description: " + descr;
+    }
 }
